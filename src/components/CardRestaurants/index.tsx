@@ -1,50 +1,73 @@
+import { Link } from 'react-router-dom'
 import {
   Button,
   Card,
   CardContainer,
   Description,
+  Rate,
+  RateDiv,
   RestaurantBanner,
   Tag,
   Title,
   TitleContainer
 } from './styles'
-import Restaurant1 from '../../assets/images/image1.png'
 import star from '../../assets/images/star.png'
-import { Link } from 'react-router-dom'
+export interface MenuItem {
+  foto: string
+  preco: number
+  id: number
+  nome: string
+  descricao: string
+  porcao: string
+}
+export type DadosRestaurante = {
+  id: number
+  titulo: string
+  destacado?: boolean
+  tipo: string
+  avaliacao: number
+  descricao: string
+  capa: string
+  cardapio?: MenuItem[]
+}
+export const getDescription = (descricao: string) => {
+  if (descricao.length > 120) {
+    return descricao.slice(0, 117) + '...'
+  }
 
-type Props = {
-  title: string
-  category: string
-  description: string
-  rate: string
+  return descricao
 }
 
-const Restaurant = ({ title, category, description, rate }: Props) => (
-  <Card>
-    <RestaurantBanner src={Restaurant1} alt="" />
-    <CardContainer>
-      <TitleContainer>
-        <Title>titulo</Title>
-        <span>
-          nota
-          <span>
-            <img src={star} alt="star" />
-          </span>
-        </span>
-      </TitleContainer>
-      <Description>
-        Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis
-        frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega
-        rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão
-        sem sair do lar com nosso delivery!
-      </Description>
-      <Link to="/restaurant">
-        {' '}
-        <Button>Saiba mais</Button>{' '}
-      </Link>
-    </CardContainer>
-    <Tag>Italiana</Tag>
-  </Card>
-)
+const Restaurant = ({
+  titulo,
+  tipo,
+  descricao,
+  avaliacao,
+  capa,
+  id
+}: DadosRestaurante) => {
+  return (
+    <Card>
+      <RestaurantBanner src={capa} alt="foto do restaurante" />
+      <CardContainer>
+        <TitleContainer>
+          <Title>{titulo}</Title>
+          <RateDiv>
+            <Rate>{avaliacao}</Rate>
+            <span>
+              <img src={star} alt="" />
+            </span>
+          </RateDiv>
+        </TitleContainer>
+        <Description>{getDescription(descricao)}</Description>
+        <Link to={`/restaurant/${id}`}>
+          {' '}
+          <Button>Saiba mais</Button>{' '}
+        </Link>
+      </CardContainer>
+      <Tag>{tipo}</Tag>
+    </Card>
+  )
+}
 
 export default Restaurant
