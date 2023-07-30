@@ -1,7 +1,5 @@
 import { BannerDiv, BannerImg, Category, Title } from './styles'
 
-import bannerImg from '../../assets/images/image2.png'
-
 type Props = {
   capa: string
   tipo: string

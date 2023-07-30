@@ -13,12 +13,13 @@ export const Card = styled.div`
 export const ProductImg = styled.img`
   width: 304px;
   height: 167px;
-  display: block;
+  margin-bottom: 8px;
 `
 export const Title = styled.h3`
   font-weight: 900;
   font-size: 16px;
   line-height: 19px;
+  margin-bottom: 8px;
   color: ${colors.beige};
 `
 
@@ -26,6 +27,7 @@ export const Description = styled.p`
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
+  margin-bottom: 8px;
   color: ${colors.beige};
 `
 
@@ -36,5 +38,6 @@ export const AddCart = styled.button`
   width: 100%;
   border: none;
   padding: 4px;
-  display: block;
+  font-weight: bold;
+  font-size: 14px;
 `

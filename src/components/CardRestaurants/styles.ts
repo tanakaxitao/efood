@@ -18,7 +18,7 @@ export const RestaurantBanner = styled.img`
 export const Title = styled.h3`
   font-size: 18px;
   font-weight: 700;
-  line-height: 21px;
+  line-height: 22px;
 `
 
 export const Description = styled.p`
