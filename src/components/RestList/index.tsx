@@ -7,9 +7,9 @@ import {
 } from '../../components/CardRestaurants'
 import Product from '../../Pages/Product'
 import { Close, List, Modal, ModalContainer, ModalContent } from './styles'
-import close from '../../assets/images/fechar.png'
+import closeIcon from '../../assets/images/fechar.png'
 import { useDispatch } from 'react-redux'
-import { add, open } from '../../store/reducers/cart'
+import { add, open, close } from '../../store/reducers/cart'
 import { formataPreco } from '../../components/cart'
 
 type ModalState = {
@@ -30,6 +30,9 @@ const ProductList = () => {
   const addToCart = () => {
     dispatch(add(selectedProduct!))
     dispatch(open())
+    setModal({
+      isVisible: false
+    })
   }
 
   useEffect(() => {
@@ -82,7 +85,7 @@ const ProductList = () => {
               </div>
             </ModalContainer>
             <Close
-              src={close}
+              src={closeIcon}
               alt="fechar"
               onClick={() => {
                 setModal({
