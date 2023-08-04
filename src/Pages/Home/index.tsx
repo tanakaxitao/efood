@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react'
 import Header from '../../components/Header'
 import RestList from '../../components/ProducstList'
-import { DadosRestaurante } from '../../components/CardRestaurants'
 import { useGetRestaurantsQuery } from '../../services/api'
 
 const Home = () => {

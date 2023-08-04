@@ -9,7 +9,7 @@ import Product from '../../Pages/Product'
 import { Close, List, Modal, ModalContainer, ModalContent } from './styles'
 import closeIcon from '../../assets/images/fechar.png'
 import { useDispatch } from 'react-redux'
-import { add, open, close } from '../../store/reducers/cart'
+import { add, open } from '../../store/reducers/cart'
 import { formataPreco } from '../../components/cart'
 
 type ModalState = {

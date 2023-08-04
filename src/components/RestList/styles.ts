@@ -46,8 +46,8 @@ export const ModalContainer = styled.div`
   display: flex;
   gap: 24px;
   > img {
-    width: 280px;
-    height: 280px;
+    width: 472px;
+    height: 217px;
     object-fit: cover;
   }
   div h4 {

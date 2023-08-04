@@ -1,4 +1,7 @@
-import Restaurant, { DadosRestaurante } from '../../components/CardRestaurants'
+import Restaurant, {
+  DadosRestaurante,
+  getDescription
+} from '../../components/CardRestaurants'
 import { List, ListContainer } from './styles'
 
 type Props = {
@@ -14,7 +17,7 @@ const RestList = ({ restaurants }: Props) => (
             id={restaurante.id}
             titulo={restaurante.titulo}
             tipo={restaurante.tipo}
-            descricao={restaurante.descricao}
+            descricao={getDescription(restaurante.descricao)}
             avaliacao={restaurante.avaliacao}
             capa={restaurante.capa}
           ></Restaurant>

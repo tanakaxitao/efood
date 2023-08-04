@@ -7,11 +7,12 @@ export const Card = styled.div`
   height: 398px;
   position: relative;
   margin-top: 44px;
+  margin-bottom: 80px;
 `
 
 export const RestaurantBanner = styled.img`
   width: 100%;
-  height: 217px;
+  height: 398px;
   display: block;
   object-fit: cover;
 `
