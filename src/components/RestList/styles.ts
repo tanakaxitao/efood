@@ -8,6 +8,10 @@ export const List = styled.ul`
   row-gap: 32px;
   column-gap: 32px;
   margin-bottom: 120px;
+  @media (max-width: 1030px) {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
 `
 export const Modal = styled.div`
   position: fixed;
@@ -44,13 +48,17 @@ export const ModalContent = styled.div`
 `
 export const ModalContainer = styled.div`
   display: flex;
+  width: 656px;
+  height: 176px;
   gap: 24px;
   > img {
-    width: 472px;
-    height: 217px;
+    width: 280px;
+    padding: 8px;
+    height: 280px;
     object-fit: cover;
   }
   div h4 {
+    margin-top: 16px;
     font-size: 18px;
     color: ${colors.white};
     margin-bottom: 16px;

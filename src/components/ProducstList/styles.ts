@@ -6,9 +6,10 @@ export const List = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-  row-gap: 32px;
-  column-gap: 32px;
+  margin-top: 80px;
   margin-bottom: 120px;
+  column-gap: 54px;
+
   @media (max-width: 1030px) {
     grid-template-columns: 1fr;
   }

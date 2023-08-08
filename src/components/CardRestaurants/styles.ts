@@ -6,25 +6,24 @@ export const Card = styled.div`
   width: 100%;
   height: 398px;
   position: relative;
-  margin-top: 44px;
-  margin-bottom: 80px;
 `
 
 export const RestaurantBanner = styled.img`
   width: 100%;
-  height: 398px;
+  height: 217px;
   display: block;
   object-fit: cover;
 `
 export const Title = styled.h3`
   font-size: 18px;
   font-weight: 700;
-  line-height: 22px;
+  line-height: 21px;
 `
 
 export const Description = styled.p`
   font-size: 14px;
   margin-bottom: 16px;
+  font-weight: 400;
   line-height: 22px;
 `
 
@@ -41,6 +40,7 @@ export const CardContainer = styled.div`
   padding: 8px;
   border: 1px solid ${colors.rose};
   border-top: none;
+  width: 100%;
 `
 
 export const TitleContainer = styled.div`

@@ -5,7 +5,7 @@ export const Card = styled.div`
   padding: 8px;
   background-color: ${colors.rose};
   width: 320px;
-  height: 339px;
+  height: 320px;
   display: flex;
   flex-direction: column;
   gap: 8px;
